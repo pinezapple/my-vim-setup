@@ -17,7 +17,7 @@ urgent = #B73C33
 [bar/main]
 width = 100%
 height = 22
-;monitor = HDMI-1
+monitor = HDMI-1
 radius = 1.0
 fixed-center = true
 

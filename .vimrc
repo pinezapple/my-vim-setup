@@ -26,12 +26,12 @@ call vundle#begin()
  Plugin 'terryma/vim-multiple-cursors'
  Plugin 'Xuyuanp/nerdtree-git-plugin'
  Plugin 'scrooloose/nerdtree'
- Plugin 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+ Plugin 'fatih/vim-go'
  Plugin 'mileszs/ack.vim'
  "Plugin 'mdempsky/gocode', { 'rtp': 'vim', 'do':'~/.vim/plugged/gocode/vim/symlink.sh' }
  Plugin 'jlanzarotta/bufexplorer'
  ""Plugin 'ycm-core/YouCompleteMe', { 'do': './install.py' }
- Plugin 'Valloric/YouCompleteMe'
+ ""Plugin 'Valloric/YouCompleteMe'
  Plugin 'rust-lang/rust.vim'
 
 call vundle#end()
@@ -54,7 +54,7 @@ set omnifunc=syntaxcomplete#Complete
 
 syntax on
 
-call pathogen#helptags()
+""call pathogen#helptags()
 autocmd vimenter * NERDTree
 
 let NERDTreeMinimalUI = 1
@@ -97,9 +97,14 @@ nnoremap <silent> <C-l> <C-w>>
 
 "bind yank to clipboard
 ""vmap <Leader>y "*y
-"nmap <Leader>p "*p
+""nmap <Leader>p "*p
 nmap <Leader>p "+p
 vmap <leader>y "+y
+""noremap <Leader>y "*y
+""noremap <Leader>p "*p
+""noremap <Leader>Y "+y
+""noremap <Leader>P "+p
+
 set clipboard=unnamedplus
 
 "Auto complete Bracket
@@ -148,13 +153,15 @@ nnoremap <silent> <M-F12> :BufExplorer<CR>
 nnoremap <silent> <F12> :bn<CR>
 nnoremap <silent> <S-F12> :bp<CR>
 
-"YCM_Golang
+"Golang
 let g:go_fmt_command = "goimports"
 
 "YCM_Python
-let g:ycm_python_binary_path = 'python'
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_min_num_of_chars_for_completion = 1
+""let g:ycm_python_binary_path = 'python'
+""let g:ycm_autoclose_preview_window_after_completion = 1
+""let g:ycm_min_num_of_chars_for_completion = 1
 
 "YCM_Rust
-let g:ycm_rust_src_path = '/home/pine/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src'
+""let g:ycm_rust_src_path = '/home/pine/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src'
+
+
